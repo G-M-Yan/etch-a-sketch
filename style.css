@@ -1,0 +1,73 @@
+body {
+    font-family: 'Russo One', sans-serif;
+    background-color: rgb(176, 221, 219);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    position: relative;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 60px;
+    color: rgb(255, 208, 0);
+    position: absolute;
+    margin-bottom: 49.8rem;
+    
+}
+
+.container  {
+    width: 880px;
+    height: 640px;
+    border: 120px solid rgb(255, 87, 87);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgb(80, 80, 80);
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(255, 250, 244);
+
+}
+
+.cell {
+    box-sizing: border-box;
+    border: 1px solid rgb(218, 218, 218);
+}
+
+button {
+    font-family: 'Russo One', sans-serif;
+    font-size: 16px;
+    width: 90px;
+    padding: 10px 15px;
+    margin: 5px;
+    transition-duration: 0.4s;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 250, 244);
+}
+
+button:hover {
+    background-color: rgb(255, 208, 0);
+}
+
+p {
+    margin-right: 10px;
+    color: rgb(255, 250, 244);
+}
+
+.left {
+    display: flex;
+    position: absolute;
+    margin-top: 47.5rem;
+    margin-left: -30.8rem;
+}
+
+.right {
+    display: flex;
+    position: absolute;
+    margin-top: 47.5rem;
+    margin-right: -27.2rem   
+    
+}
