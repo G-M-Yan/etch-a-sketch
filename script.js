@@ -1,7 +1,42 @@
 const container = document.querySelector('.container');
+let currentColor = 'black';
+
+function createGrid(gridSize) {
+    container.innerHTML = '';
+    if (gridSize === 'small') {
+        for (let i = 0; i < 22; i++) {
+            for (j = 0; j < 16; j++) {
+                const cell = document.createElement('div');
+                cell.classList.add('cell');
+                cell.style = 'width: calc(100%/22); height: calc(100%/16)'
+                container.appendChild(cell);
+            }
+        }
+    } else if (gridSize === 'medium') {
+        for (let i = 0; i < 44; i++) {
+            for (let j = 0; j < 32; j++) {
+                const cell = document.createElement('div');
+                cell.classList.add('cell');
+                cell.style = 'width: calc(100%/44); height: calc(100%/32)'
+                container.appendChild(cell);
+            }
+        }
+
+    } else {
+        for (let i = 0; i < 88; i++) {
+            for (j = 0; j < 64; j++) {
+                const cell = document.createElement('div');
+                cell.classList.add('cell');
+                cell.style = 'width: calc(100%/88); height: calc(100%/64)'
+                container.appendChild(cell);
+            }
+        }
+    }
+    addColorListeners();
+}
 
 function changeGridSize() {
-    const buttons = document.querySelectorAll('button');
+    const buttons = document.querySelectorAll('.grid-size');
     buttons.forEach(button => {
         button.addEventListener('click', () => {
             const buttonID = button.id;
@@ -23,74 +58,48 @@ function changeGridSize() {
     })
 }
 
-function createGrid(gridSize) {
-    container.innerHTML = '';
-    if (gridSize === 'small') {
-        for (let i = 0; i < 22; i++) {
-            for (j = 0; j < 16; j++) {
-                const cell = document.createElement('div');
-                cell.classList.add('cell');
-                cell.style = 'width: calc(100%/22); height: calc(100%/16)'
-                container.appendChild(cell);
-            }
-        }
-    } else if (gridSize === 'medium') {
-        for (let i = 0; i < 44; i++) {
-            for (j = 0; j < 32; j++) {
-                const cell = document.createElement('div');
-                cell.classList.add('cell');
-                cell.style = 'width: calc(100%/44); height: calc(100%/32)'
-                container.appendChild(cell);
-            }
-        }
+function chooseColor() {
+    const colorButtons = document.querySelector('.right');
 
-    } else {
-        for (let i = 0; i < 88; i++) {
-            for (j = 0; j < 64; j++) {
-                const cell = document.createElement('div');
-                cell.classList.add('cell');
-                cell.style = 'width: calc(100%/88); height: calc(100%/64)'
-                container.appendChild(cell);
-            }
+    colorButtons.addEventListener('click', function(e) {
+        const targetButton = e.target;
+
+        if (targetButton.classList.contains('grid-color')) {
+            currentColor = getColorFromButton(targetButton.id);
         }
-    }
-    addColorListeners();
+    });
 }
 
+
+function getColorFromButton(buttonID) {
+    switch (buttonID) {
+        case 'black':
+            return 'black';
+        case 'warm':
+            return 'red';
+        case 'cold':
+            return 'blue';
+        case 'erase':
+            return '';
+        default:
+            return 'black';
+    }
+}
 
 
 function changeColor() {
-    this.style.backgroundColor = 'black';
-//     const buttons = document.querySelectorAll('button');
-//     buttons.forEach(button => {
-//         button.addEventListener('click', () => {
-//             const buttonID = button.id;
-            
-//             switch (buttonID) {
-//                 case 'black':
-//                     this.style.backgroundColor = 'black';
-//                     break;
-//                 case 'warm':
-//                     this.style.backgroundColor = 'red';
-//                     break;
-//                 case 'cold':
-//                     this.style.backgroundColor = 'blue';
-//                     break;
-//             }
-//         })
-//     })
+    event.target.style.backgroundColor = currentColor;
 }
-    // this.style.backgroundColor = 'black';
-
 
 
 function addColorListeners() {
     const mouseHover = document.querySelectorAll('.cell');
     
-    mouseHover.forEach(element => {
-        element.addEventListener('mouseover', changeColor);
+    mouseHover.forEach(cell => {
+        cell.addEventListener('mouseover', changeColor);
     });
 }
 
 createGrid('small');
 changeGridSize();
+chooseColor();

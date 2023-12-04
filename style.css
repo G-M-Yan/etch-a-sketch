@@ -44,12 +44,19 @@ button {
     margin: 5px;
     transition-duration: 0.4s;
     border: none;
+    box-shadow: 3px 3px 3px black;
     border-radius: 5px;
     background-color: rgb(255, 250, 244);
 }
 
 button:hover {
     background-color: rgb(255, 208, 0);
+}
+
+button:active {
+    transform: translate(2px, 3px);
+    box-shadow: none;
+
 }
 
 p {
