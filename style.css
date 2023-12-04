@@ -1,6 +1,8 @@
 body {
     font-family: 'Russo One', sans-serif;
-    background-color: rgb(176, 221, 219);
+    background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://konachan.com/image/43f46d3b90fc7fdd4c147ca7d0552331/Konachan.com%20-%20122602%20mitauzo%20monochrome%20original%20scenic%20school_uniform%20sketch.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,7 +15,7 @@ body {
 h1 {
     font-weight: bold;
     font-size: 60px;
-    color: rgb(255, 208, 0);
+    color: rgb(255, 250, 244);
     position: absolute;
     margin-bottom: 49.8rem;
     
@@ -22,9 +24,9 @@ h1 {
 .container  {
     width: 880px;
     height: 640px;
-    border: 120px solid rgb(255, 87, 87);
+    border: 120px solid #212129;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px rgb(80, 80, 80);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-wrap: wrap;
     background-color: rgb(255, 250, 244);

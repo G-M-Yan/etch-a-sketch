@@ -70,22 +70,43 @@ function chooseColor() {
     });
 }
 
+function generateColor(name, colors) {
+    const gridCell = document.querySelectorAll('.cell');
+    gridCell.forEach((cell) => {
+      if (name === 'warm' || name === 'cold') {
+        const randomColor = colors[Math.floor(
+          Math.random() * colors.length,
+        )];
+        cell.addEventListener('mouseenter', (e) => {
+          e.target.style.backgroundColor = randomColor;
+        });
+      } else if (name === 'black') {
+        cell.addEventListener('mouseenter', (e) => {
+          e.target.style.backgroundColor = colors;
+        });
+      } else if (name === 'eraser') {
+        cell.addEventListener('mouseenter', (e) => {
+            e.target.style.backgroundColor = '';
+        });
+      }
+    });
+}
+
 
 function getColorFromButton(buttonID) {
     switch (buttonID) {
         case 'black':
-            return 'black';
+            return generateColor('black', 'black');
         case 'warm':
-            return 'red';
+            return generateColor('warm', ['#BF6A6D', '#A45256', '#EC6760', '#F88C5D', '#FDCF6D']);
         case 'cold':
-            return 'blue';
-        case 'erase':
-            return '';
+            return generateColor('cold', ['#5590BC', '#0DABB8', '#01F0F6', '#1FFDE1', '#57FFC8']);;
+        case 'eraser':
+            return generateColor('eraser', ['#FFFAF4']);
         default:
             return 'black';
     }
 }
-
 
 function changeColor() {
     event.target.style.backgroundColor = currentColor;
