@@ -5,6 +5,11 @@ This project is a recreation of the classic Etch-A-Sketch toy using HTML, CSS, a
 ## Live Preview
 🔗 [Live Preview](https://g-m-yan.github.io/etch-a-sketch/)
 
+#### Screenshot of the Website
+
+![screenshot](![Uploading etch-a-sketch.png…]
+)
+
 ## Technologies Used
 - HTML
 - CSS
@@ -34,4 +39,3 @@ This project is a recreation of the classic Etch-A-Sketch toy using HTML, CSS, a
 - Enhanced user interaction and visual experience.
 
 This project aims to replicate the charm of the Etch-A-Sketch toy using modern web technologies. The codebase combines functionality, interactivity, and CSS styling to deliver an engaging Etch-A-Sketch experience on the web.
-
