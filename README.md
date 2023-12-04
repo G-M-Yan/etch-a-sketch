@@ -12,25 +12,25 @@ This project is a recreation of the classic Etch-A-Sketch toy using HTML, CSS, a
 
 ## JavaScript Functions
 
-### createGrid(gridSize)
+### `createGrid(gridSize)`
 Generates a grid based on the selected size for drawing ('small', 'medium', 'large').
 
-### changeGridSize()
+### `changeGridSize()`
 Handles changing the grid size using buttons.
 
-### chooseColor()
+### `chooseColor()`
 Enables users to select different colors for drawing on the grid.
 
-### generateColor(name, colors)
+### `generateColor(name, colors)`
 Generates color options for drawing cells based on specified themes ('warm', 'cold', 'black', 'eraser').
 
-### getColorFromButton(buttonID)
+### `getColorFromButton(buttonID)`
 Retrieves the color based on the button clicked by the user.
 
-### changeColor()
+### `changeColor()`
 Changes the cell's color upon mouse hover based on the currently selected color.
 
-### addColorListeners()
+### `addColorListeners()`
 Attaches event listeners to cells for changing color on mouse hover.
 
 ## Summary
