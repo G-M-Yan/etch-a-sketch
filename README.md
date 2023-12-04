@@ -7,7 +7,7 @@ This project is a recreation of the classic Etch-A-Sketch toy using HTML, CSS, a
 
 #### Screenshot of the Website
 
-![screenshot](![Uploading etch-a-sketch.png…]
+![screenshot](https://github.com/G-M-Yan/etch-a-sketch/blob/main/screenshot-etch-a-sketch.png
 )
 
 ## Technologies Used
